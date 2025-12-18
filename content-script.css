@@ -1,0 +1,8 @@
+/* This file would ideally contain compiled Tailwind CSS for the StatsCard and other injected elements. */
+/* For this example, we'll keep it minimal. */
+
+/* Base styles for the injected StatsCard container */
+.custom-stats-card-container {
+    position: fixed;
+    z-index: 2147483647; /* Ensure it's always on top */
+}

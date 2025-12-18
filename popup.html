@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTO Pulse Poker HUD</title>
+    <!-- Tailwind CSS CDN for popup only -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'custom-red': '#ef4444',
+              'custom-yellow': '#eab308',
+              'custom-green': '#22c55e',
+              'custom-blue': '#3b82f6',
+              'custom-purple': '#a855f7',
+              'custom-gray': '#d1d5db',
+              'custom-dark-gray': '#374151',
+              'custom-light-gray': '#f3f4f6',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client"
+  }
+}
+</script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-gray-100 p-4 flex items-center justify-center font-sans w-56 h-64 overflow-hidden">
+    <div id="root" class="w-full h-full"></div>
+    <script type="module" src="/popup.tsx"></script>
+</body>
+</html>
