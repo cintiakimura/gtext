@@ -54,7 +54,8 @@ export enum Action {
 
 export interface GTOAdvice {
   action: Action;
-  percentage: string;
+  equity: number;
+  strength: 'premium' | 'strong' | 'weak';
   insight: string;
   colorClass: string; // Tailwind color class for the card background
 }
@@ -71,19 +72,4 @@ export interface StatsCardData {
   playerState: PokerPlayerState;
   advice: GTOAdvice | null;
   position: { x: number; y: number }; // Relative to PokerTableArea or screen
-}
-
-export interface GTOHandRange {
-  open: string[];
-  threeBet: string[];
-  call: string[];
-}
-
-export interface GTOLogic {
-  UTG: GTOHandRange;
-  HJ: GTOHandRange;
-  CO: GTOHandRange;
-  BTN: GTOHandRange;
-  SB: GTOHandRange;
-  BB_vs_BTN_Open: GTOHandRange;
 }

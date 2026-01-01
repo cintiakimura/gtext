@@ -1,4 +1,5 @@
 {
   "name": "GTO Pulse Poker HUD",
-  "description": "A real-time poker statistics and advice application based on GTO preflop ranges, designed to simulate screen scanning and provide insights for optimal play."
+  "description": "A real-time poker statistics and advice application based on GTO preflop ranges, designed to simulate screen scanning and provide insights for optimal play.",
+  "requestFramePermissions": []
 }

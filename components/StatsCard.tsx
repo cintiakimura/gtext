@@ -140,7 +140,10 @@ const StatsCard: React.FC<StatsCardProps> = ({ id, initialX, initialY, playerSta
       ) : (
         <>
           <div className="flex justify-between items-center mb-1">
-            <span className="font-bold text-base">{internalPlayerState.hand?.raw || 'No Hand'}</span>
+            <span className="font-bold text-base">
+              {internalPlayerState.hand?.raw || 'No Hand'}
+              {advice && <span className="text-xs font-normal ml-1 opacity-80">({advice.strength})</span>}
+            </span>
             <span className="text-xs text-gray-200">{internalPlayerState.position} - {internalPlayerState.stackDepthBB}bb</span>
           </div>
           {advice ? (
@@ -149,7 +152,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ id, initialX, initialY, playerSta
                 {advice.action}
               </div>
               <div className="flex justify-between items-center text-xs">
-                <span>Equity: {advice.percentage}</span>
+                <span>Equity: {advice.equity}%</span>
                 <span className="truncate max-w-[60%]">{advice.insight.split('(')[0].trim()}</span>
               </div>
             </>
